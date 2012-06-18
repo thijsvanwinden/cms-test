@@ -1,0 +1,8 @@
+<?php
+
+use Zend\Json\Json;
+
+echo Json::encode(array(
+    'errors' => $this->textSaveForm->getErrors(),
+    'errorMessages' => $this->textSaveForm->getErrorMessages()
+));

@@ -1,0 +1,61 @@
+<?php echo $this->contentSaveForm->setAction($this->url(null, array(), array(), true)); ?>
+
+<style>
+    textarea#content {
+        width: auto;
+    }
+</style>
+<script type="text/javascript" src="<?php echo $this->basePath('js/jquery.form.js'); ?>"></script>
+<script type="text/javascript">
+    $(function()
+    {
+//        var id = 'content-save-form';
+//        $('#content-save-form').ajaxForm({
+//            dataType: 'json',
+//            success: function(responseText,statusText,xhr, form){     
+//                var form = $("#"+id)
+//                form.find('.errors').remove();
+//                var els = form.find(':input');
+//                els.each(function(){                    
+//                    var name = $(this).attr('name');  
+//                    if(responseText.errorMessages[name]){
+//                        $(this).parent().append(getErrorHtml(responseText.errorMessages[name], name));                       
+//                    }
+//                });
+//            }
+//        });
+        
+//        $("input").blur(function()
+//        {
+//            var formElementId = $(this).parent().prev().find('label').attr('for');
+//            var url = $(this).parent('form').attr('action');
+//            doValidation(formElementId, url);
+//        });
+    });
+    function doValidation(id, url)
+    {
+        var data = {};
+        $("input").each(function()
+        {
+            data[$(this).attr('name')] = $(this).val();
+        });
+        $.post(url,data,function(resp)
+        {
+            $("#"+id).parent().find('.errors').remove();
+            $("#"+id).parent().append(getErrorHtml(resp[id], id));
+        },'json');
+    }
+    function getErrorHtml(formErrors , id)
+    {
+        var o = '<ul id="errors-'+id+'" class="errors">';
+        for(errorKey in formErrors)
+        {
+            o += '<li>' + formErrors[errorKey] + '</li>';
+        }
+        o += '</ul>';
+        return o;
+    }
+
+</script>
+
+

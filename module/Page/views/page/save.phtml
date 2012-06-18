@@ -1,0 +1,49 @@
+<?php //$this->headScript()->captureStart();     ?>
+<script type="text/javascript">
+    $(function(){
+        var bannerDialog = $('.dialog-edit').dialog({
+            modal: true,
+            autoOpen: false,
+            resizable: false,
+            draggable: false,
+            width: 'auto'
+        });
+                
+//        $('.slot').each(function(){
+//            $(this).prepend($('.container-option-bar').clone());
+//        });
+        
+        $('.slot').mouseenter(function(event){
+            $(this).find('.container-option-bar').fadeTo(200, '0.7');            
+        }).mouseleave(function(event){
+            $(this).find('.container-option-bar').hide();            
+        });   
+        
+        $('.container-option-bar').hide();  
+//        $('.container-option-bar-edit').click(function(e){            
+//            bannerDialog.load('<?php echo $this->url('node/save', array('name' => 'banner')); ?>', function(){
+//                bannerDialog.dialog('option', 'position', 'center');
+//            });
+//            bannerDialog.dialog('open');         
+//        });
+    });
+</script>
+<style type="text/css">
+    .container-option-bar {
+        z-index: 10;
+        position: absolute;
+        background: #000;
+        border-radius: 3px;
+        width: 100px;
+        margin: 5px;
+        padding: 3px;
+    }
+    .container-option-bar a{
+        text-decoration: none;
+        color: #FFF;
+    }
+</style>
+<?php //$this->headScript()->captureEnd(); ?>
+<?php echo $this->raw('content'); ?>
+<div class='dialog-edit'></div>
+

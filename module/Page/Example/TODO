@@ -1,0 +1,68 @@
+Version
+Layout + Validation
+Rendering
+Inline Editing
+
+Node locked
+
+Layout
+getNodeType for slot
+isValid
+create Layout from database values
+
+Slots
+locked
+type
+interfaces
+validators? 
+
+Nodes
+register node types
+get node types
+
+Version
+mark
+revert
+get
+
+Mogelijkheden
+
+Nodes in 1 object
+Node objecten opbouwen uit db
+Nodes opbouwen uit configuratie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Page
+locked
+no rights
+
+Layout
+Node valid for slot
+
+Node
+locked
+no rights

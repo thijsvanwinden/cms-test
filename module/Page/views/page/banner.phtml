@@ -1,0 +1,17 @@
+<style>
+    .banner-container {
+        height: 506px;
+    }
+</style>
+<script type="text/javascript">
+    $(function(){
+        $('.banner-container').cycle({
+            fx: 'fade'
+        });        
+    });
+</script>
+<div class="banner-container">
+    <img class="banner-container-img" width="900px" src="<?php echo $this->basePath('images/nature.jpg'); ?>"/>
+    <img class="banner-container-img" width="900px" src="<?php echo $this->basePath('images/nature2.jpg'); ?>"/>
+    <img class="banner-container-img" width="900px" src="<?php echo $this->basePath('images/nature3.jpg'); ?>"/>
+</div>

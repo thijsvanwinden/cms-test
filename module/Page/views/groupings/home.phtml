@@ -1,0 +1,46 @@
+<style type="text/css">
+    .page-home-banner {
+        background-color: #F5F5F5;
+        border-radius: 6px 6px 6px 6px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    .page-home-content {
+        width: 100%;                
+        border-radius: 12px 12px 12px 12px;    
+        background-color: #F5F5F5;
+        background-image: -moz-linear-gradient(center top , #F5F5F5, #F5F5F5);
+        background-repeat: repeat-x;
+    }
+    .page-home-action, .page-home-contact, .page-home-service {
+        width: 280px;
+        float: left;        
+        margin: 20px 0 20px 20px;
+        padding: 5px;
+        border-radius: 6px 6px 6px 6px;
+        background-color: #FFF;
+    }
+    .banner-container-img {        
+        border-radius: 6px 6px 6px 6px;
+    }
+    .clearfix {
+        clear: both;
+    }
+</style>
+
+
+<div class="page-home-content">
+    <div class="page-home-action">
+        <?php echo $this->action->content; ?>
+    </div>
+    <div class="page-home-service">
+        <?php echo $this->service->content; ?>
+    </div>    
+    <div class="page-home-contact">
+        <?php echo $this->contact->content; ?>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="page-home-banner">    
+    <?php echo $this->banner->content; ?>
+</div>
